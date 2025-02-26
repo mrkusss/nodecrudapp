@@ -12,11 +12,13 @@
   "author": "Mrkus_sss",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mrkusss/nodecrudapp/issues"
+    "url": "https://github.com/mrkusss/nodecrudapp/issues",
+    "dev": "nodemon index.js"
   },
   "homepage": "https://github.com/mrkusss/nodecrudapp#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.13.1",
     "mongoose": "^8.10.2",
