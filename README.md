@@ -41,11 +41,11 @@ npm start
 
 | Method | Endpoint       | Description          |
 |--------|---------------|----------------------|
-| GET    | `/api/items`  | Get all items       |
-| GET    | `/api/items/:id` | Get item by ID     |
-| POST   | `/api/items`  | Create a new item   |
-| PUT    | `/api/items/:id` | Update an item    |
-| DELETE | `/api/items/:id` | Delete an item    |
+| GET    | `/api/produkts`  | Get all items       |
+| GET    | `/api/produts/:id` | Get item by ID     |
+| POST   | `/api/products`  | Create a new item   |
+| PUT    | `/api/products/:id` | Update an item    |
+| DELETE | `/api/products/:id` | Delete an item    |
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or create pull requests.
