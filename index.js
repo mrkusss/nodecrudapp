@@ -1,13 +1,15 @@
 const express = require("express"); // Import express module
 const mongoose = require("mongoose"); // import module mongoose that helps us in work with mongoDB
-const Product = require("./models/product.model.js");
-const productRoute = require("./routes/product.route.js");
-require("dotenv").config();
+const productRoute = require("./routes/product.route.js"); // Importing the product route module to handle product-related API endpoints
+require("dotenv").config(); //imports .env variables 
 
 const PORT = process.env.PORT;
 const app = express(); // creating a server
 
+// Middleware to parse incoming JSON requests
 app.use(express.json());
+// Middleware to parse URL-encoded data from form submissions
+app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use("/api/products", productRoute);
@@ -37,7 +39,6 @@ app.get("/", (req, res) => {
 mongoose
   .connect(
     process.env.MONGODB_URI 
-    // "mongodb+srv://admin:Sw6CLs1j98DwCGAW@backenddb.8iiz5.mongodb.net/nodecrudapp?retryWrites=true&w=majority&appName=BackendDB"
   )
   .then(() => {
     console.log("Connected to database!");
